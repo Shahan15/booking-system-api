@@ -13,13 +13,17 @@ app.get('/', (req,res)=>{
 
 app.post('/resources', (req,res) => {
     const newResource = req.body
-    resourceHolder.push(newResource)
-    res.status(200).json(resourceHolder)
+    
+    if(!newResource.name){
+        res.status(400).json({message:"Resource name is required"})
+    } else {
+        res.status(200).json(resourceHolder)
+    }
 });
 
 app.get('/resources',(req,res) =>{
     if(isArrayEmpty(resourceHolder) === true){
-        res.status(400).json({message: "Array is empty, cannot fetch resource"})
+        res.status(200).json({message: "Array is empty, cannot fetch resource"})
     } else {
         res.status(200).json({message: "fetching resources...",
             resourceHolder
