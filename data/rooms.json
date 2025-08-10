@@ -1,0 +1,27 @@
+[
+    {
+        "id": 1, 
+        "number": 101, 
+        "type": "standard", 
+        "capacity" : 2, 
+        "pricePerNight": 80, 
+        "description" : "Cozy"
+    },
+    {
+        "id" : 2, 
+        "number" : 201, 
+        "type" : "deluxe", 
+        "capacity": 3, 
+        "pricePerNight" : 120, 
+        "description" : "City view"
+    },
+    {
+        "id" : 3, 
+        "number" : 301, 
+        "type" : "suite", 
+        "capacity" : 4, 
+        "pricePerNight" : 180, 
+        "description" : "Large suite"
+    }
+]
+    
